@@ -8,8 +8,8 @@
     "cluster": "pm2 start src/server.js -i max --name nasa-project-api",
     "cluster-stop": "pm2 stop nasa-project-api",
     "cluster-delete": "pm2 delete nasa-project-api",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles --coverage",
-    "test-watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles --watchAll"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
+    "test-watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watchAll"
   },
   "keywords": [],
   "author": "",
