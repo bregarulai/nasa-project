@@ -3,11 +3,13 @@ import request from "supertest";
 import app from "../../app.js";
 import { mongoConnect, mongoDisconnect } from "../../services/mongo.js";
 import { loadPlanetsData } from "../../models/planets.model.js";
+import { loadLaunchData } from "../../models/launches.model.js";
 
 describe("Launches APi", () => {
   beforeAll(async () => {
     await mongoConnect();
     await loadPlanetsData();
+    await loadLaunchData();
   });
 
   afterAll(async () => {
