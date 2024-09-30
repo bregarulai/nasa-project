@@ -2,8 +2,6 @@ import request from "supertest";
 
 import app from "../../app.js";
 import { mongoConnect, mongoDisconnect } from "../../services/mongo.js";
-import { loadPlanetsData } from "../../models/planets.model.js";
-import { loadLaunchData } from "../../models/launches.model.js";
 
 describe("Planets API", () => {
   beforeAll(async () => {
@@ -12,8 +10,6 @@ describe("Planets API", () => {
 
   afterAll(async () => {
     await mongoDisconnect();
-    // await loadPlanetsData();
-    // await loadLaunchData();
   });
 
   describe("Test GET /api/v1/planets", () => {
