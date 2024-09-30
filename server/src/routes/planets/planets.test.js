@@ -12,8 +12,8 @@ describe("Planets API", () => {
 
   afterAll(async () => {
     await mongoDisconnect();
-    await loadPlanetsData();
-    await loadLaunchData();
+    // await loadPlanetsData();
+    // await loadLaunchData();
   });
 
   describe("Test GET /api/v1/planets", () => {
