@@ -4,11 +4,11 @@ import app from "../../app.js";
 import { mongoConnect, mongoDisconnect } from "../../services/mongo.js";
 
 describe("Planets API", () => {
-  beforeAll(async () => {
+  beforeEach(async () => {
     await mongoConnect();
   });
 
-  afterAll(async () => {
+  afterEach(async () => {
     await mongoDisconnect();
   });
 
