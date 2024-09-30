@@ -1,0 +1,37 @@
+{
+  "name": "nasa-project-api",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "cluster": "pm2 start src/server.js -i max --name nasa-project-api",
+    "cluster-stop": "pm2 stop nasa-project-api",
+    "cluster-delete": "pm2 delete nasa-project-api",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles --coverage",
+    "test-watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "description": "NASA Mission Control API",
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "cors": "^2.8.5",
+    "csv-parse": "^5.5.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "mongoose": "^8.7.0",
+    "morgan": "^1.10.0",
+    "pm2": "^5.4.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.7",
+    "supertest": "^7.0.0"
+  }
+}
